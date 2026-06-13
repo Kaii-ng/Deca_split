@@ -3,25 +3,33 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&lt 4 ESC  &kp Q     &kp W     &kp E    &kp R  &kp T
-&lt 2 TAB  &kp A     &kp S     &kp D    &kp F  &kp G
-&kp LSHFT  &kp Z     &kp X     &kp C    &kp V  &kp B
+&lt 4 ESC  &kp Q     &kp W     &kp E        &kp R  &kp T
+&lt 2 TAB  &kp A     &kp S     &kp D        &kp F  &kp G
+&kp LSHFT  &kp Z     &kp X     &kp C        &kp V  &kp B
 &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE
             >;
         };
 
         layer_1 {
             bindings = <
-&none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &none         &none         &none         &none         &none
-&none   &bootloader   &sys_reset    &bt BT_CLR    &none         &none
-&none   &none         &none         &none
+&trans        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &lt 2 R  &bt BT_SEL 2
+&kp CAPSLOCK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none    &bt BT_SEL 1
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none    &bt BT_SEL 0
+&trans        &none         &none         &none
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
             >;
         };
     };
